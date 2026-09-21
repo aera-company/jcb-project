@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Pin the root: a stray ~/package-lock.json otherwise makes Turbopack pick $HOME.
+  turbopack: { root: path.resolve(".") },
 };
 
 export default nextConfig;

@@ -13,7 +13,16 @@ import {
 import Digital from "@/components/jcb-digital";
 import BrandFilmPlayer from "@/components/brand-film";
 import PageMotion from "@/components/page-motion";
-import { problems, pillars, recurring, separate } from "@/data/content";
+import AvisoExemplo from "@/components/aviso-exemplo";
+import {
+  problems,
+  pillars,
+  recurring,
+  separate,
+  plan,
+  nextSteps,
+  contact,
+} from "@/data/content";
 
 const pillarIcons = [Layers, MessageSquare, Users, Eye, Sparkles];
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -59,7 +68,7 @@ export default function Home() {
             </p>
             <h1 id="hero-title" className="hero-brand">
               <span className="sr-only">+JCB</span>
-              <img src="/brand/plus-jcb.svg" alt="" width="592" height="198" />
+              <img src="/brand/plus-jcb.svg" alt="" width="2580" height="748" />
             </h1>
             <h2 className="hero-message">
               <span>Mais informação.</span>
@@ -88,8 +97,8 @@ export default function Home() {
                   className="preview-brand"
                   src="/brand/plus-jcb.svg"
                   alt="+JCB"
-                  width="592"
-                  height="198"
+                  width="2580"
+                  height="748"
                 />
                 <span className="concept-tag">Conceito digital</span>
               </div>
@@ -155,6 +164,30 @@ export default function Home() {
             <span>O morador entende</span>
           </div>
         </section>
+        <section
+          id="exemplo"
+          className="example-section section page-width"
+          aria-labelledby="example-title"
+        >
+          <div className="section-heading">
+            <div>
+              <SectionLabel>Na prática</SectionLabel>
+              <h2 id="example-title">
+                O mesmo aviso.
+                <br />
+                <span className="muted-heading">Agora fácil de entender.</span>
+              </h2>
+            </div>
+            <div>
+              <p>
+                Um exemplo de como a AERA transforma um comunicado da gestão em
+                uma informação que o morador lê em segundos.
+              </p>
+              <span className="outlined-tag">Exemplo ilustrativo</span>
+            </div>
+          </div>
+          <AvisoExemplo />
+        </section>
         <section className="role-section" aria-labelledby="role-title">
           <div className="page-width role-inner">
             <div className="role-heading">
@@ -184,8 +217,8 @@ export default function Home() {
                   className="role-brand"
                   src="/brand/plus-jcb-white.svg"
                   alt="+JCB"
-                  width="592"
-                  height="198"
+                  width="2580"
+                  height="748"
                 />
                 <span>
                   Comunicação<small>A AERA prepara os materiais</small>
@@ -240,12 +273,6 @@ export default function Home() {
               );
             })}
           </div>
-
-          <p className="services-note">
-            O acompanhamento mensal inclui comunicação e organização. Produção
-            de eventos, placas, projetos de arquitetura e sistemas têm orçamento
-            separado. <a href="#atuacao">Veja o que está incluído.</a>
-          </p>
           <div
             className="applications-grid"
             data-motion="photos"
@@ -355,26 +382,16 @@ export default function Home() {
             </figcaption>
           </figure>
           <div>
-            <SectionLabel>Projetos especiais</SectionLabel>
+            <SectionLabel>Direção visual</SectionLabel>
             <h2 id="special-title">
-              Para demandas maiores,
+              O ponto de partida
               <br />
-              um projeto à parte.
+              da identidade +JCB.
             </h2>
             <p>
-              Uma nova área, um vídeo ou um evento maior pede um trabalho
-              específico. A AERA pode preparar uma proposta com entregas, prazo
-              e valor definidos.
-            </p>
-            <div className="special-list">
-              <span>Projetos de arquitetura e imagens 3D</span>
-              <span>Apresentações para assembleias</span>
-              <span>Vídeos e campanhas especiais</span>
-              <span>Produção de eventos</span>
-              <span>Páginas para divulgar projetos</span>
-            </div>
-            <p className="scope-note">
-              <Plus size={16} /> Orçamento separado do escopo mensal.
+              O moodboard reúne o símbolo oficial, as fontes, as cores e as
+              referências de sinalização. No primeiro mês, ele vira o padrão
+              dos comunicados do JCB.
             </p>
           </div>
         </section>
@@ -392,8 +409,8 @@ export default function Home() {
               </h2>
             </div>
             <p>
-              O acompanhamento mensal cobre a rotina de comunicação. Projetos
-              maiores e custos de produção têm orçamento separado.
+              A rotina de comunicação está no mensal. Uma nova área, um vídeo
+              ou um evento maior pede um projeto à parte.
             </p>
           </div>
           <div className="scope-grid">
@@ -425,10 +442,62 @@ export default function Home() {
                 ))}
               </ul>
               <p>
-                Cada demanda adicional terá escopo e valor apresentados para
-                aprovação antes de começar.
+                Cada projeto tem entregas, prazo e valor aprovados pela gestão
+                antes de começar.
               </p>
             </div>
+          </div>
+        </section>
+        <section
+          id="plano"
+          className="plan-section section page-width"
+          aria-labelledby="plan-title"
+        >
+          <div className="section-heading">
+            <div>
+              <SectionLabel>Os primeiros 90 dias</SectionLabel>
+              <h2 id="plan-title">
+                O que acontece
+                <br />
+                em cada mês.
+              </h2>
+            </div>
+            <p>
+              Um período com entregas definidas, para a gestão acompanhar o
+              avanço e decidir a continuidade com base no resultado.
+            </p>
+          </div>
+          <ol className="plan-timeline" data-motion="flow">
+            {plan.map((phase) => (
+              <li key={phase.month}>
+                <span className="plan-month">{phase.month}</span>
+                <h3>{phase.title}</h3>
+                <p>{phase.description}</p>
+                <ul>
+                  {phase.deliverables.map((item) => (
+                    <li key={item}>
+                      <Check size={15} aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="plan-milestone">
+                  <strong>Ao final do mês</strong>
+                  {phase.milestone}
+                </p>
+              </li>
+            ))}
+          </ol>
+          <div className="plan-summary">
+            <span>
+              <strong>3 meses</strong> de acompanhamento
+            </span>
+            <span>
+              <strong>R$ 6.000</strong> no período (3 × R$ 2.000)
+            </span>
+            <span>
+              <strong>Revisão conjunta</strong> ao final
+            </span>
           </div>
         </section>
         <section
@@ -465,11 +534,6 @@ export default function Home() {
               Ao final dos 90 dias, a AERA e a gestão podem rever os serviços, o
               volume de pedidos e a forma de trabalhar.
             </p>
-            <p className="investment-note">
-              O valor cobre a atuação recorrente descrita nesta proposta.
-              Projetos especiais e produções adicionais são orçados
-              separadamente.
-            </p>
           </div>
         </section>
         <section
@@ -477,25 +541,41 @@ export default function Home() {
           aria-labelledby="closing-title"
         >
           <div>
-            <SectionLabel>+JCB · Uma iniciativa AERA</SectionLabel>
+            <SectionLabel>Próximos passos</SectionLabel>
             <h2 id="closing-title">
-              Mais informação.
+              Para começar,
               <br />
-              Mais participação.
-              <br />
-              Mais JCB.
+              três passos.
             </h2>
-            <p>
-              Apoio para a gestão comunicar o que faz. Clareza para o morador
-              saber o que acontece, acompanhar as melhorias e participar.
-            </p>
+            <ol className="next-steps">
+              {nextSteps.map((step, i) => (
+                <li key={step.title}>
+                  <span className="step-number">{i + 1}</span>
+                  <div>
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="closing-actions">
+              <a
+                className="primary-link"
+                href={`mailto:${contact.email}?subject=${encodeURIComponent(contact.subject)}`}
+              >
+                Agendar a conversa de alinhamento <ArrowUpRight size={18} />
+              </a>
+              <a className="text-link" href="#plano">
+                Rever o plano de 90 dias
+              </a>
+            </div>
           </div>
           <div className="closing-mark">
             <img
               src="/brand/plus-jcb.svg"
               alt="+JCB"
-              width="592"
-              height="198"
+              width="2580"
+              height="748"
             />
             <p>
               Fazer também

@@ -24,13 +24,14 @@ O valor proposto é R$ 2.000/mês, com período inicial sugerido de 90 dias. Pro
 ## Limites da demonstração
 Não há backend de produto, autenticação de moradores, banco de dados ou IA funcional. A enquete mantém uma seleção apenas em memória, sem enviar dados. As perguntas frequentes usam respostas fixas. Eventos e projetos da demonstração são ilustrativos. As referências de sinalização não representam obras contratadas.
 
-A marca oficial, as fotografias/referências e o moodboard foram fornecidos na pasta do projeto. A composição +JCB preserva o símbolo oficial e combina Playfair Display com um sinal de mais. As versões vetoriais em public/brand têm texto convertido em curvas. Playfair Display e Montserrat são servidas localmente, com licenças incluídas em public/fonts.
+A marca oficial, as fotografias/referências e o moodboard foram fornecidos na pasta do projeto. O símbolo oficial aparece só no cabeçalho. O +JCB é uma assinatura tipográfica em Montserrat Bold, com o sinal de mais desenhado no peso das letras e o J sem a bandeira superior; as versões em public/brand têm o texto convertido em curvas. Playfair Display e Montserrat são servidas localmente, com licenças incluídas em public/fonts.
 
 ## Marca e Remotion
 
-- public/brand/plus-jcb.svg: composição vetorial oliva
-- public/brand/plus-jcb-white.svg: composição vetorial branca
-- scripts/create-brand.mjs: geração reprodutível a partir do símbolo oficial e das fontes locais
+- public/brand/plus-jcb.svg: assinatura +JCB oliva
+- public/brand/plus-jcb-white.svg: assinatura +JCB branca
+- scripts/create-brand.mjs: geração reprodutível a partir de scripts/assets/montserrat-bold.ttf (instância wght 700 da Montserrat local)
+- public/video/parquinho-obra.mp4: timelapse ilustrativo da reforma do parquinho (Kling 3.0), sem autoplay
 - remotion/BrandFilm.tsx: filme editorial de 9 segundos, 1080×1200, 30 fps
 - public/video/plus-jcb.mp4: versão renderizada, sem áudio
 - public/video/plus-jcb.vtt: texto equivalente em português

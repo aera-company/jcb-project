@@ -75,17 +75,83 @@ export const pillars = [
   },
 ];
 export const recurring = [
-  "Planejar a comunicação e definir um padrão visual",
-  "Criar os comunicados e materiais recorrentes",
-  "Organizar o calendário de divulgação e apoiar campanhas internas",
-  "Acompanhar o planejamento e os conteúdos do +JCB Digital",
-  "Realizar uma reunião mensal com a gestão",
-  "Atender pequenas demandas de comunicação do dia a dia",
+  "Planejamento da comunicação e padrão visual +JCB",
+  "Avisos e comunicados para WhatsApp e mural",
+  "Divulgação de eventos e campanhas internas",
+  "Atualizações de obras e melhorias",
+  "Planejamento de conteúdo do +JCB Digital",
+  "Reunião mensal com a gestão",
 ];
 export const separate = [
   "Produção de eventos, vídeos e grandes campanhas",
-  "Impressão, produção de placas e sinalização",
+  "Impressão, placas e sinalização",
   "Projetos de arquitetura e imagens 3D",
-  "Desenvolvimento de sistemas e integrações",
+  "Apresentações especiais para assembleias",
+  "Páginas para divulgar projetos",
+  "Desenvolvimento de sistemas, incluindo o +JCB Digital",
   "Fotografia e outras produções especiais",
 ];
+
+export const plan = [
+  {
+    month: "Mês 1",
+    title: "Organizar",
+    description:
+      "Entender como a comunicação funciona hoje e criar o padrão +JCB.",
+    deliverables: [
+      "Reunião de início com a gestão",
+      "Levantamento dos canais e comunicados atuais",
+      "Padrão visual e modelos de comunicado",
+      "Calendário de divulgação do trimestre",
+    ],
+    milestone: "Modelos aprovados pela gestão",
+  },
+  {
+    month: "Mês 2",
+    title: "Colocar em rotina",
+    description:
+      "Os comunicados passam a sair no novo padrão, nos canais que o JCB já usa.",
+    deliverables: [
+      "Avisos no padrão +JCB para WhatsApp e mural",
+      "Divulgação dos eventos do calendário",
+      "Primeira atualização de obra ou melhoria",
+      "Reunião mensal com a gestão",
+    ],
+    milestone: "Comunicação do dia a dia no padrão +JCB",
+  },
+  {
+    month: "Mês 3",
+    title: "Consolidar e avaliar",
+    description:
+      "Reunir o que o morador mais pergunta e medir o que mudou no trimestre.",
+    deliverables: [
+      "Perguntas frequentes a partir das dúvidas recorrentes",
+      "Planejamento de conteúdo do +JCB Digital",
+      "Balanço do trimestre: o que foi publicado e o que mudou",
+      "Reunião de revisão do escopo",
+    ],
+    milestone: "Decisão conjunta sobre a continuidade",
+  },
+];
+
+export const nextSteps = [
+  {
+    title: "Conversa de alinhamento",
+    description:
+      "Uma reunião com a gestão para tirar dúvidas e ajustar prioridades.",
+  },
+  {
+    title: "Aprovação",
+    description: "A gestão aprova a proposta e define a data de início.",
+  },
+  {
+    title: "Primeira semana",
+    description:
+      "Reunião de início e levantamento dos comunicados atuais do JCB.",
+  },
+];
+
+export const contact = {
+  email: "sales@aera.company",
+  subject: "+JCB · Conversa de alinhamento",
+};

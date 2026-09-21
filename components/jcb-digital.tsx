@@ -49,8 +49,8 @@ export default function Digital() {
             className="digital-lockup"
             src="/brand/plus-jcb.svg"
             alt="+JCB"
-            width="592"
-            height="198"
+            width="2580"
+            height="748"
           />
         </div>
         <span>Seu condomínio, mais próximo.</span>
