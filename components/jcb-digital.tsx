@@ -73,7 +73,7 @@ export default function Digital() {
             <div className="demo-title">
               <div>
                 <p>JCB Agora</p>
-                <h3>Bom viver é estar por dentro.</h3>
+                <h3>Veja o que acontece no JCB.</h3>
               </div>
               <Leaf size={28} strokeWidth={1.2} />
             </div>
@@ -87,16 +87,14 @@ export default function Digital() {
                   loading="lazy"
                 />
                 <div>
-                  <span className="demo-kicker">
-                    Um olhar para o nosso espaço
-                  </span>
+                  <span className="demo-kicker">Obras e melhorias</span>
                   <h4>Melhorias que fazem parte do dia a dia.</h4>
                   <Button
                     className="demo-text-button"
                     variant="ghost"
                     onClick={() => setTab("melhorias")}
                   >
-                    Acompanhar possibilidades <ArrowUpRight size={16} />
+                    Ver exemplo de projeto <ArrowUpRight size={16} />
                   </Button>
                 </div>
               </article>
@@ -124,9 +122,8 @@ export default function Digital() {
                   <span>
                     <small>Agenda JCB</small>
                     <strong>
-                      Mais encontros.
-                      <br />
-                      Mais comunidade.
+                      Veja os eventos
+                      <br />e as próximas datas.
                     </strong>
                   </span>
                   <ArrowUpRight size={17} />
@@ -146,7 +143,7 @@ export default function Digital() {
             <div className="demo-title">
               <div>
                 <p>Em andamento e próximos passos</p>
-                <h3>Cada melhoria, mais visível.</h3>
+                <h3>Entenda cada etapa do projeto.</h3>
               </div>
               <ClipboardList size={27} strokeWidth={1.2} />
             </div>
@@ -166,10 +163,10 @@ export default function Digital() {
               </div>
               <div>
                 <span className="demo-pill">Exemplo · proposta em estudo</span>
-                <h4>Uma linguagem para os espaços</h4>
+                <h4>Placas para orientar os moradores</h4>
                 <p>
-                  Exemplo de como apresentar uma proposta de sinalização:
-                  objetivo, linguagem visual e próximos passos.
+                  Exemplo de como apresentar uma proposta de sinalização: o que
+                  muda, onde as placas ficam e quais são os próximos passos.
                 </p>
                 <ol className="project-steps">
                   <li>
@@ -193,7 +190,7 @@ export default function Digital() {
             <div className="demo-title">
               <div>
                 <p>Agenda JCB</p>
-                <h3>Encontros que aproximam.</h3>
+                <h3>Eventos e reuniões do condomínio.</h3>
               </div>
               <CalendarDays size={27} strokeWidth={1.2} />
             </div>
@@ -243,7 +240,7 @@ export default function Digital() {
             <div className="demo-title">
               <div>
                 <p>Enquetes e consultas</p>
-                <h3>Ouvir também é construir.</h3>
+                <h3>Dê sua opinião nas consultas.</h3>
               </div>
               <Users size={27} strokeWidth={1.2} />
             </div>
@@ -256,7 +253,8 @@ export default function Digital() {
                   conversas com a gestão.
                 </p>
                 <small>
-                  Simulação local. Nenhum voto é enviado ou armazenado.
+                  Esta é uma demonstração. Sua escolha não será enviada nem
+                  salva.
                 </small>
               </div>
               <div className="poll-options">
@@ -282,7 +280,7 @@ export default function Digital() {
                 ))}
                 <p className="poll-feedback" role="status">
                   {choice
-                    ? "Escolha demonstrativa selecionada. Obrigado por experimentar!"
+                    ? "Opção selecionada nesta demonstração. Nenhum voto foi enviado."
                     : "Selecione uma opção para experimentar."}
                 </p>
               </div>
@@ -304,8 +302,8 @@ export default function Digital() {
                   disponibilizadas pela administração.
                 </p>
                 <small>
-                  Nesta demonstração, as respostas são exemplos fixos. Não há IA
-                  conectada.
+                  Nesta demonstração, as respostas já estão escritas. Um
+                  assistente com IA dependeria de um projeto separado.
                 </small>
               </div>
               <Accordion type="single" collapsible className="demo-faq">
@@ -314,9 +312,9 @@ export default function Digital() {
                     Onde acompanhar as melhorias?
                   </AccordionTrigger>
                   <AccordionContent>
-                    A área “Em andamento” poderia reunir o objetivo, as etapas e
-                    os próximos passos de cada projeto, com informações
-                    validadas pela administração.
+                    A aba “Melhorias” poderia reunir o objetivo, as etapas e os
+                    próximos passos de cada projeto, com informações validadas
+                    pela administração.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="participacao">
@@ -347,8 +345,8 @@ export default function Digital() {
       <div className="demo-bottom">
         <span>Informação · Participação · Proximidade</span>
         <span>
-          Outras possibilidades: projetos, arquivo, antes e depois e
-          indicadores.
+          Também poderia reunir documentos, fotos de antes e depois e resumos da
+          gestão.
         </span>
       </div>
     </div>

@@ -13,7 +13,7 @@ import {
 import Digital from "@/components/jcb-digital";
 import BrandFilmPlayer from "@/components/brand-film";
 import PageMotion from "@/components/page-motion";
-import { pillars, recurring, separate } from "@/data/content";
+import { problems, pillars, recurring, separate } from "@/data/content";
 
 const pillarIcons = [Layers, MessageSquare, Users, Eye, Sparkles];
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -67,11 +67,12 @@ export default function Home() {
               <span>Mais JCB.</span>
             </h2>
             <p className="hero-description">
-              Uma nova camada de comunicação, participação e inteligência para o
-              Jardim Clube da Barra.
+              A AERA organiza os avisos, explica as melhorias e divulga as
+              atividades do JCB para facilitar o dia a dia da gestão e dos
+              moradores.
             </p>
             <a className="primary-link" href="#proposta">
-              Conheça a proposta <ArrowDown size={18} />
+              Veja como podemos ajudar <ArrowDown size={18} />
             </a>
             <p className="hero-note">Uma iniciativa AERA para o JCB.</p>
           </div>
@@ -107,7 +108,7 @@ export default function Home() {
           </figure>
         </section>
         <div className="hero-baseline page-width">
-          <span>Uma visão integrada para o condomínio.</span>
+          <span>Comunicação clara para o dia a dia do JCB.</span>
           <span>
             Tradição <i /> Convívio <i /> Natureza <i /> Futuro
           </span>
@@ -118,56 +119,64 @@ export default function Home() {
           aria-labelledby="opportunity-title"
         >
           <div>
-            <SectionLabel>A oportunidade</SectionLabel>
+            <SectionLabel>O que podemos melhorar</SectionLabel>
             <h2 id="opportunity-title">
-              Muita coisa acontece no JCB.
+              A informação precisa chegar.
               <br />
-              <span className="muted-heading">Nem tudo é percebido.</span>
+              <span className="muted-heading">E ser fácil de entender.</span>
             </h2>
           </div>
           <div className="opportunity-copy">
             <p>
-              Obras, melhorias, eventos, decisões e novos projetos fazem parte
-              da experiência de quem vive no condomínio.
+              A gestão tem obras, manutenção, eventos e decisões para comunicar.
+              O +JCB ajuda a explicar tudo isso de forma simples.
             </p>
             <p>
-              Quando a informação chega fragmentada entre WhatsApp, PDFs, murais
-              e mensagens isoladas, parte desse valor se perde.
-            </p>
-            <p className="emphasis">
-              O +JCB organiza a comunicação, cria continuidade e torna mais
-              visível tudo o que a administração realiza.
+              A proposta parte de situações que podem dificultar essa rotina:
             </p>
           </div>
+          <div className="pain-grid">
+            {problems.map((problem) => (
+              <article key={problem.title}>
+                <h3>{problem.title}</h3>
+                <p>{problem.description}</p>
+                <p className="pain-response">
+                  <strong>Como ajudamos</strong>
+                  {problem.response}
+                </p>
+              </article>
+            ))}
+          </div>
           <div className="value-flow">
-            <span>Organizar melhor</span>
+            <span>A gestão informa</span>
             <ArrowRight aria-hidden="true" />
-            <span>Comunicar melhor</span>
+            <span>A AERA organiza</span>
             <ArrowRight aria-hidden="true" />
-            <span>Aumentar a percepção de valor</span>
+            <span>O morador entende</span>
           </div>
         </section>
         <section className="role-section" aria-labelledby="role-title">
           <div className="page-width role-inner">
             <div className="role-heading">
-              <SectionLabel>O papel do +JCB</SectionLabel>
+              <SectionLabel>Como funciona</SectionLabel>
               <h2 id="role-title">
-                Não é apenas produzir mais.
-                <br />É organizar melhor.
+                A gestão traz a informação.
+                <br />A AERA prepara a comunicação.
               </h2>
               <p>
-                Uma camada estratégica entre a administração e o morador. Mais
-                clareza, consistência e continuidade para o que já acontece.
+                Organizamos as prioridades com a administração e transformamos
+                as informações em textos e materiais visuais. A gestão valida o
+                conteúdo para divulgação nos canais do condomínio.
               </p>
             </div>
             <div
               className="role-diagram"
               data-motion="flow"
-              aria-label="Gestão, informação, experiência do morador"
+              aria-label="A gestão informa, a AERA prepara os materiais e o morador acompanha"
             >
               <div>
                 <span>Gestão</span>
-                <small>O que o JCB realiza</small>
+                <small>Compartilha informações e prioridades</small>
               </div>
               <ArrowDown size={22} />
               <div className="role-focus">
@@ -179,18 +188,18 @@ export default function Home() {
                   height="198"
                 />
                 <span>
-                  Informação<small>O que o +JCB conecta</small>
+                  Comunicação<small>A AERA prepara os materiais</small>
                 </span>
               </div>
               <ArrowDown size={22} />
               <div>
-                <span>Experiência do morador</span>
-                <small>O valor que se percebe</small>
+                <span>Morador</span>
+                <small>Entende os avisos e acompanha as novidades</small>
               </div>
             </div>
             <p className="role-footer">
-              O JCB já faz muita coisa. O +JCB ajuda tudo isso a ser melhor
-              comunicado, percebido e compartilhado.
+              Usamos os canais que o JCB já tem, como WhatsApp e murais, com
+              informações mais fáceis de ler e encontrar.
             </p>
           </div>
         </section>
@@ -201,16 +210,16 @@ export default function Home() {
         >
           <div className="section-heading">
             <div>
-              <SectionLabel>Uma atuação conectada</SectionLabel>
+              <SectionLabel>Serviços na prática</SectionLabel>
               <h2 id="pillars-title">
-                Cinco pilares.
+                O que a AERA faz
                 <br />
-                Uma mesma direção.
+                pelo JCB.
               </h2>
             </div>
             <p>
-              Da identidade à participação, cada frente contribui para uma
-              experiência mais clara e próxima.
+              Da criação de um aviso à apresentação de uma melhoria: veja os
+              serviços e exemplos de materiais que podemos preparar.
             </p>
           </div>
           <div className="pillar-grid">
@@ -232,6 +241,11 @@ export default function Home() {
             })}
           </div>
 
+          <p className="services-note">
+            O acompanhamento mensal inclui comunicação e organização. Produção
+            de eventos, placas, projetos de arquitetura e sistemas têm orçamento
+            separado. <a href="#atuacao">Veja o que está incluído.</a>
+          </p>
           <div
             className="applications-grid"
             data-motion="photos"
@@ -246,8 +260,8 @@ export default function Home() {
                 loading="lazy"
               />
               <figcaption>
-                <span>Natureza e convívio</span>
-                <small>Comunidade que se aproxima.</small>
+                <span>Atividades do condomínio</span>
+                <small>Convites, datas e divulgação.</small>
               </figcaption>
             </figure>
             <figure>
@@ -259,8 +273,8 @@ export default function Home() {
                 loading="lazy"
               />
               <figcaption>
-                <span>Experiência de morar</span>
-                <small>Valor em cada espaço.</small>
+                <span>Uso dos espaços</span>
+                <small>Regras e orientações claras.</small>
               </figcaption>
             </figure>
             <figure className="signage-reference">
@@ -272,7 +286,7 @@ export default function Home() {
                 loading="lazy"
               />
               <figcaption>
-                <span>Informação no território</span>
+                <span>Placas e sinalização</span>
                 <small>Referência de sinalização.</small>
               </figcaption>
             </figure>
@@ -288,25 +302,28 @@ export default function Home() {
               <div>
                 <SectionLabel>+JCB Digital</SectionLabel>
                 <h2 id="digital-title">
-                  Um ponto de encontro.
+                  Avisos, agenda e dúvidas.
                   <br />
-                  Muitas formas de se conectar.
+                  Em um lugar fácil de consultar.
                 </h2>
               </div>
               <div>
                 <p>
-                  Uma futura central de informação, participação e inteligência,
-                  complementar aos canais do condomínio.
+                  Uma ideia para reunir comunicados, novidades sobre obras,
+                  eventos e perguntas frequentes. Abaixo, você pode testar uma
+                  demonstração.
                 </p>
-                <span className="outlined-tag">Visualização conceitual</span>
+                <span className="outlined-tag">
+                  Demonstração de uma proposta futura
+                </span>
               </div>
             </div>
             <Digital />
             <div className="digital-footnote">
-              <p>Explore as abas para conhecer possibilidades da central.</p>
+              <p>Clique nas abas para ver exemplos de conteúdo.</p>
               <p>
-                Conceito ilustrativo. Conteúdos, funcionalidades e
-                desenvolvimento sujeitos à definição de escopo.
+                Esta central ainda não está em operação. Desenvolvimento e
+                integrações precisam de definição e orçamento separados.
               </p>
             </div>
           </div>
@@ -340,19 +357,21 @@ export default function Home() {
           <div>
             <SectionLabel>Projetos especiais</SectionLabel>
             <h2 id="special-title">
-              Quando o projeto pede mais,
-              <br />o +JCB pode ir além.
+              Para demandas maiores,
+              <br />
+              um projeto à parte.
             </h2>
             <p>
-              Frentes específicas para demandas de maior complexidade, com a
-              mesma linguagem e visão estratégica.
+              Uma nova área, um vídeo ou um evento maior pede um trabalho
+              específico. A AERA pode preparar uma proposta com entregas, prazo
+              e valor definidos.
             </p>
             <div className="special-list">
-              <span>Arquitetura e renders</span>
+              <span>Projetos de arquitetura e imagens 3D</span>
               <span>Apresentações para assembleias</span>
               <span>Vídeos e campanhas especiais</span>
-              <span>Experiências e eventos</span>
-              <span>Landing pages e implantação</span>
+              <span>Produção de eventos</span>
+              <span>Páginas para divulgar projetos</span>
             </div>
             <p className="scope-note">
               <Plus size={16} /> Orçamento separado do escopo mensal.
@@ -366,22 +385,21 @@ export default function Home() {
         >
           <div className="section-heading">
             <div>
-              <SectionLabel>Modelo de atuação</SectionLabel>
+              <SectionLabel>O que está incluído</SectionLabel>
               <h2 id="operating-title">
-                Uma atuação contínua.
-                <br />
-                Um parceiro próximo.
+                O que entra no mensal.
+                <br />O que é cobrado à parte.
               </h2>
             </div>
             <p>
-              A AERA acompanha a gestão, organiza as prioridades e dá
-              continuidade à comunicação do condomínio.
+              O acompanhamento mensal cobre a rotina de comunicação. Projetos
+              maiores e custos de produção têm orçamento separado.
             </p>
           </div>
           <div className="scope-grid">
             <div className="included">
               <div className="scope-heading">
-                <h3>No acompanhamento mensal</h3>
+                <h3>Incluído no mensal</h3>
                 <span>Escopo inicial</span>
               </div>
               <ul>
@@ -395,7 +413,7 @@ export default function Home() {
             </div>
             <div className="excluded">
               <div className="scope-heading">
-                <h3>Sob orçamento específico</h3>
+                <h3>Orçamento separado</h3>
                 <span>Conforme a demanda</span>
               </div>
               <ul>
@@ -407,8 +425,8 @@ export default function Home() {
                 ))}
               </ul>
               <p>
-                Produções adicionais e demandas de maior porte são dimensionadas
-                e orçadas separadamente.
+                Cada demanda adicional terá escopo e valor apresentados para
+                aprovação antes de começar.
               </p>
             </div>
           </div>
@@ -421,16 +439,16 @@ export default function Home() {
           <div className="investment-main">
             <SectionLabel>Investimento</SectionLabel>
             <h2 id="investment-title">
-              Um começo leve.
+              Comunicação organizada.
               <br />
-              Uma visão de continuidade.
+              Acompanhamento mensal.
             </h2>
             <div className="price">
               <span>R$</span> 2.000<small>/ mês</small>
             </div>
             <p className="price-description">
-              Fee inicial de implantação
-              <br />e acompanhamento do +JCB.
+              Valor mensal para iniciar e acompanhar
+              <br />a comunicação do +JCB.
             </p>
           </div>
           <div className="investment-details">
@@ -439,13 +457,13 @@ export default function Home() {
               90 <span>dias</span>
             </div>
             <p>
-              Começar, acompanhar e evoluir a partir das necessidades reais do
-              condomínio.
+              Um período para organizar a rotina e ajustar o trabalho às
+              necessidades do condomínio.
             </p>
             <div className="investment-divider" />
             <p>
-              Ao final desse período, escopo, volume de demandas e modelo de
-              atuação podem ser reavaliados em conjunto.
+              Ao final dos 90 dias, a AERA e a gestão podem rever os serviços, o
+              volume de pedidos e a forma de trabalhar.
             </p>
             <p className="investment-note">
               O valor cobre a atuação recorrente descrita nesta proposta.
@@ -468,9 +486,8 @@ export default function Home() {
               Mais JCB.
             </h2>
             <p>
-              Uma estrutura contínua para apoiar a administração, aproximar
-              moradores e fortalecer a percepção de um condomínio cada vez
-              melhor.
+              Apoio para a gestão comunicar o que faz. Clareza para o morador
+              saber o que acontece, acompanhar as melhorias e participar.
             </p>
           </div>
           <div className="closing-mark">
