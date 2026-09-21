@@ -79,16 +79,16 @@ export const recurring = [
   "Avisos e comunicados para WhatsApp e mural",
   "Divulgação de eventos e campanhas internas",
   "Atualizações de obras e melhorias",
-  "Planejamento de conteúdo do +JCB Digital",
+  "Apresentações para assembleias",
+  "Desenvolvimento e conteúdo do +JCB Digital",
   "Reunião mensal com a gestão",
 ];
 export const separate = [
   "Produção de eventos, vídeos e grandes campanhas",
   "Impressão, placas e sinalização",
   "Projetos de arquitetura e imagens 3D",
-  "Apresentações especiais para assembleias",
   "Páginas para divulgar projetos",
-  "Desenvolvimento de sistemas, incluindo o +JCB Digital",
+  "Integrações com outros sistemas",
   "Fotografia e outras produções especiais",
 ];
 
@@ -102,7 +102,7 @@ export const plan = [
       "Reunião de início com a gestão",
       "Levantamento dos canais e comunicados atuais",
       "Padrão visual e modelos de comunicado",
-      "Calendário de divulgação do trimestre",
+      "Calendário de divulgação dos próximos meses",
     ],
     milestone: "Modelos aprovados pela gestão",
   },
@@ -121,16 +121,16 @@ export const plan = [
   },
   {
     month: "Mês 3",
-    title: "Consolidar e avaliar",
+    title: "Consolidar",
     description:
-      "Reunir o que o morador mais pergunta e medir o que mudou no trimestre.",
+      "Reunir o que o morador mais pergunta e colocar o +JCB Digital em andamento.",
     deliverables: [
       "Perguntas frequentes a partir das dúvidas recorrentes",
-      "Planejamento de conteúdo do +JCB Digital",
-      "Balanço do trimestre: o que foi publicado e o que mudou",
-      "Reunião de revisão do escopo",
+      "Início do desenvolvimento do +JCB Digital",
+      "Balanço do que foi publicado e do que mudou",
+      "Planejamento dos próximos meses com a gestão",
     ],
-    milestone: "Decisão conjunta sobre a continuidade",
+    milestone: "Rotina consolidada e prioridades dos próximos meses",
   },
 ];
 

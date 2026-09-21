@@ -349,8 +349,8 @@ export default function Home() {
             <div className="digital-footnote">
               <p>Clique nas abas para ver exemplos de conteúdo.</p>
               <p>
-                Esta central ainda não está em operação. Desenvolvimento e
-                integrações precisam de definição e orçamento separados.
+                Esta central ainda não está em operação. O desenvolvimento faz
+                parte do acompanhamento mensal.
               </p>
             </div>
           </div>
@@ -455,7 +455,7 @@ export default function Home() {
         >
           <div className="section-heading">
             <div>
-              <SectionLabel>Os primeiros 90 dias</SectionLabel>
+              <SectionLabel>Os primeiros meses</SectionLabel>
               <h2 id="plan-title">
                 O que acontece
                 <br />
@@ -463,8 +463,8 @@ export default function Home() {
               </h2>
             </div>
             <p>
-              Um período com entregas definidas, para a gestão acompanhar o
-              avanço e decidir a continuidade com base no resultado.
+              Como o trabalho começa, com entregas definidas para a gestão
+              acompanhar o avanço desde o primeiro mês.
             </p>
           </div>
           <ol className="plan-timeline" data-motion="flow">
@@ -488,17 +488,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <div className="plan-summary">
-            <span>
-              <strong>3 meses</strong> de acompanhamento
-            </span>
-            <span>
-              <strong>R$ 6.000</strong> no período (3 × R$ 2.000)
-            </span>
-            <span>
-              <strong>Revisão conjunta</strong> ao final
-            </span>
-          </div>
         </section>
         <section
           id="investimento"
@@ -512,28 +501,15 @@ export default function Home() {
               <br />
               Acompanhamento mensal.
             </h2>
-            <div className="price">
-              <span>R$</span> 2.000<small>/ mês</small>
+            <div className="price-block">
+              <div className="price">
+                <span>R$</span> 2.000<small>/ mês</small>
+              </div>
+              <p className="price-description">
+                Valor mensal para iniciar e acompanhar
+                <br />a comunicação do +JCB.
+              </p>
             </div>
-            <p className="price-description">
-              Valor mensal para iniciar e acompanhar
-              <br />a comunicação do +JCB.
-            </p>
-          </div>
-          <div className="investment-details">
-            <span className="period-tag">Período inicial sugerido</span>
-            <div className="period">
-              90 <span>dias</span>
-            </div>
-            <p>
-              Um período para organizar a rotina e ajustar o trabalho às
-              necessidades do condomínio.
-            </p>
-            <div className="investment-divider" />
-            <p>
-              Ao final dos 90 dias, a AERA e a gestão podem rever os serviços, o
-              volume de pedidos e a forma de trabalhar.
-            </p>
           </div>
         </section>
         <section
@@ -566,7 +542,7 @@ export default function Home() {
                 Agendar a conversa de alinhamento <ArrowUpRight size={18} />
               </a>
               <a className="text-link" href="#plano">
-                Rever o plano de 90 dias
+                Rever o plano dos primeiros meses
               </a>
             </div>
           </div>

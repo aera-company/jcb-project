@@ -3662,3 +3662,28 @@ html[data-input="keyboard"] .poll-option {
     display: none;
   }
 }
+
+/* Investimento sem a coluna de período: título à esquerda, preço à direita. */
+.investment-section {
+  grid-template-columns: 1fr;
+}
+.investment-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 48px;
+  align-items: end;
+}
+.investment-main > .section-label {
+  grid-column: 1 / -1;
+}
+.price-block .price {
+  margin-top: 0;
+}
+@media (max-width: 800px) {
+  .investment-main {
+    grid-template-columns: 1fr;
+  }
+  .price-block .price {
+    margin-top: 28px;
+  }
+}

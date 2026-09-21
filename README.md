@@ -19,7 +19,7 @@ React, TypeScript e Tailwind, com estrutura App Router compatível com Next.js e
 - data/content.ts: pilares e escopos
 - public/images: símbolo oficial, novo moodboard e imagens fornecidas
 
-O valor proposto é R$ 2.000/mês, com período inicial sugerido de 90 dias. Projetos especiais e produções adicionais são orçados separadamente.
+O valor proposto é R$ 2.000/mês, sem período mínimo. Apresentações para assembleias e o desenvolvimento do +JCB Digital estão no mensal; impressão, placas, eventos e outras produções especiais são orçados separadamente.
 
 ## Limites da demonstração
 Não há backend de produto, autenticação de moradores, banco de dados ou IA funcional. A enquete mantém uma seleção apenas em memória, sem enviar dados. As perguntas frequentes usam respostas fixas. Eventos e projetos da demonstração são ilustrativos. As referências de sinalização não representam obras contratadas.
