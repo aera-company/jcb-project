@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
   CalendarDays,
@@ -11,6 +11,7 @@ import {
   MessageSquare,
   ClipboardList,
   Users,
+  Pointer,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -32,8 +33,38 @@ const tabs = [
 export default function Digital() {
   const [tab, setTab] = useState("agora");
   const [choice, setChoice] = useState<string | null>(null);
+  // Invite the visitor to try the demo until the first interaction.
+  const [explored, setExplored] = useState(false);
+  const [inView, setInView] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root || explored) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35 },
+    );
+    observer.observe(root);
+    return () => observer.disconnect();
+  }, [explored]);
+
+  const go = (value: string) => {
+    setTab(value);
+    setExplored(true);
+  };
+
   return (
-    <div className="digital-browser">
+    <div
+      className="digital-browser"
+      ref={rootRef}
+      data-attract={inView && !explored ? "true" : undefined}
+    >
       <div className="browser-chrome">
         <span className="browser-dots" aria-hidden="true">
           <i />
@@ -54,9 +85,17 @@ export default function Digital() {
           />
         </div>
         <span>Seu condomínio, mais próximo.</span>
-        <span className="demo-label">Conteúdo ilustrativo</span>
+        {explored ? (
+          <span className="demo-label">Conteúdo ilustrativo</span>
+        ) : (
+          <span className="demo-hint" aria-hidden="true">
+            <Pointer size={14} />
+            <span className="hint-touch">Toque nas abas para explorar</span>
+            <span className="hint-click">Clique nas abas para explorar</span>
+          </span>
+        )}
       </div>
-      <Tabs value={tab} onValueChange={setTab} className="demo-tabs">
+      <Tabs value={tab} onValueChange={go} className="demo-tabs">
         <TabsList
           className="demo-nav"
           aria-label="Áreas da central digital conceitual"
@@ -65,6 +104,12 @@ export default function Digital() {
             <TabsTrigger className="demo-nav-item" value={id} key={id}>
               <Icon size={18} aria-hidden="true" />
               {title}
+              {id === "melhorias" && (
+                <span className="tab-callout" aria-hidden="true">
+                  <span className="hint-touch">Toque aqui</span>
+                  <span className="hint-click">Clique aqui</span>
+                </span>
+              )}
             </TabsTrigger>
           ))}
         </TabsList>
@@ -92,7 +137,7 @@ export default function Digital() {
                   <Button
                     className="demo-text-button"
                     variant="ghost"
-                    onClick={() => setTab("melhorias")}
+                    onClick={() => go("melhorias")}
                   >
                     Ver exemplo de projeto <ArrowUpRight size={16} />
                   </Button>
@@ -101,7 +146,7 @@ export default function Digital() {
               <div className="demo-side">
                 <button
                   className="demo-shortcut"
-                  onClick={() => setTab("participar")}
+                  onClick={() => go("participar")}
                 >
                   <Users size={23} strokeWidth={1.5} />
                   <span>
@@ -116,7 +161,7 @@ export default function Digital() {
                 </button>
                 <button
                   className="demo-shortcut"
-                  onClick={() => setTab("agenda")}
+                  onClick={() => go("agenda")}
                 >
                   <CalendarDays size={23} strokeWidth={1.5} />
                   <span>
@@ -130,7 +175,7 @@ export default function Digital() {
                 </button>
                 <button
                   className="demo-question"
-                  onClick={() => setTab("pergunte")}
+                  onClick={() => go("pergunte")}
                 >
                   <MessageCircle size={19} />
                   <span>Pergunte ao JCB</span>

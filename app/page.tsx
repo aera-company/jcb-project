@@ -341,7 +341,7 @@ export default function Home() {
                   demonstração.
                 </p>
                 <span className="outlined-tag">
-                  Demonstração de uma proposta futura
+                  Demonstração interativa · proposta futura
                 </span>
               </div>
             </div>
