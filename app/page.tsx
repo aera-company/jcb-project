@@ -503,7 +503,7 @@ export default function Home() {
             </h2>
             <div className="price-block">
               <div className="price">
-                <span>R$</span> 2.000<small>/ mês</small>
+                <span>R$</span> 2.160<small>/ mês</small>
               </div>
               <p className="price-description">
                 Valor mensal para iniciar e acompanhar

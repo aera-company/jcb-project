@@ -7,5 +7,5 @@ Fonte primária: moodboard.png fornecido pelo usuário em 19/09/2026.
 - Nove blocos da proposta original. Fotos e referências do usuário substituem a imagem genérica da primeira versão.
 - Motion editorial contido em um filme Remotion de 9 segundos, reproduzido somente por ação do usuário, com controles e pausa ao sair da tela.
 - Contexto comercial permanece propositivo. Não apresentar imagens de referência, enquetes, eventos ou melhorias como execução contratada.
-- Preservar fee de R$ 2.000/mês. Sem período inicial de 90 dias (retirado em 21/09/2026).
+- Preservar fee de R$ 2.160/mês (era R$ 2.000 até 22/09/2026). Sem período inicial de 90 dias (retirado em 21/09/2026).
 - Direção validada contra UI/UX Pro Max (minimalismo editorial/arquitetura; legibilidade e acessibilidade). As fontes e cores são as do moodboard, não as sugestões genéricas da busca.
